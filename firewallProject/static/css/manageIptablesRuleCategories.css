@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+input[type="text"]{
+	width:170px;
+}
+div.div_body{
+	width:700px;
+}
+td.right{
+	text-align:right;
+}
+td.left{
+	text-align:left;
+}
+
+table.outside{
+	text-align:center;
+	margin:20px;
+	border-collapse:collapse;
+	border:solid #000000 1px;
+	width:600px;
+}
+
+table td.item{
+	width:80px;
+	padding-left:10px;
+	text-align:left;
+	border-right:solid #000000 1px;
+}
+table td.action{
+	min-width:110px;
+	text-align:center;
+	/*border-left:solid #000000 1px;*/
+}
+
+button.action{
+	width:100px;
+}
+
+td{
+	padding-top:7px;
+	padding-bottom:7px;
+}
+
+tr{
+	/**border:solid #000000 2px;**/
+	border-top:solid #000000 1px;
+	border-bottom:solid #000000 1px;
+	border-collapse:collapse;
+}

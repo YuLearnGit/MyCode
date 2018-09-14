@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1508292276 source:e:\code\ptr\main.cpp
+	<iostream>
+	<memory>
+	<vector>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"StrBlob.h"
+
+1508231822 source:e:\code\ptr\src\strblob.cpp
+	"StrBlob.h"
+	<vector>
+	<string>
+	<memory>
+
+1508231822 e:\code\ptr\include\strblob.h
+	<vector>
+	<string>
+	<memory>
+

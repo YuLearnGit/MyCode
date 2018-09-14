@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/*
+    示例：
+
+    html：
+        <div>
+            <div class="my_hint_div">
+                <span id="hint" class="my_hint"></span>
+            </div>
+        </div>
+
+ */
+
+.my_hint_div {
+    margin: 10px auto;
+    min-height: 20px;
+}
+
+.my_hint {
+    display: block;
+    color: red;
+    min-height: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    letter-spacing:1px;
+}
+
+.my_help_msg_div {
+    width: 400px;
+    margin: 10px auto;
+    min-height: 20px;
+}
+
+.my_help_msg {
+    text-align: left;
+    display: block;
+    color: darkred;
+    min-height: 20px;
+    line-height: 20px;
+    letter-spacing:1px;
+}

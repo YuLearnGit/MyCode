@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+input[type="text"]{
+	width:170px;
+}
+table{
+	min-width:200px;
+}
+
+table#vpn_set tr{
+	display:none;
+}
+
+
+dl{
+	border-bottom:solid #ff00ff 2px;
+	width:500px;
+}

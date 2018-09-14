@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+input[type="text"]{
+	width:170px;
+}
+td{
+	min-width:100px;
+}

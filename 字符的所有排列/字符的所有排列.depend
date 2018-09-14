@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1536135150 source:e:\code\字符的所有排列\main.cpp
+	<iostream>
+	<set>
+	<string>
+

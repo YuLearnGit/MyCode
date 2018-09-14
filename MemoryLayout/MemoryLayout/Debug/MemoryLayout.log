@@ -1,0 +1,83 @@
+﻿  stdafx.cpp
+  MemoryLayout.cpp
+  
+  class Base	size(12):
+  	+---
+   0	| {vfptr}
+   4	| a
+   8	| b
+  	+---
+  
+  Base::$vftable@:
+  	| &Base_meta
+  	|  0
+   0	| &Base::VirtualFunction 
+  
+  Base::VirtualFunction this adjustor: 0
+  
+  class DerivedClass1	size(16):
+  	+---
+   0	| +--- (base class Base)
+   0	| | {vfptr}
+   4	| | a
+   8	| | b
+  	| +---
+  12	| c
+  	+---
+  
+  DerivedClass1::$vftable@:
+  	| &DerivedClass1_meta
+  	|  0
+   0	| &DerivedClass1::VirtualFunction 
+  
+  DerivedClass1::VirtualFunction this adjustor: 0
+  
+  class DerivedClass2	size(16):
+  	+---
+   0	| +--- (base class Base)
+   0	| | {vfptr}
+   4	| | a
+   8	| | b
+  	| +---
+  12	| d
+  	+---
+  
+  DerivedClass2::$vftable@:
+  	| &DerivedClass2_meta
+  	|  0
+   0	| &DerivedClass2::VirtualFunction 
+  
+  DerivedClass2::VirtualFunction this adjustor: 0
+  
+  class DerivedDerivedClass	size(36):
+  	+---
+   0	| +--- (base class DerivedClass1)
+   0	| | +--- (base class Base)
+   0	| | | {vfptr}
+   4	| | | a
+   8	| | | b
+  	| | +---
+  12	| | c
+  	| +---
+  16	| +--- (base class DerivedClass2)
+  16	| | +--- (base class Base)
+  16	| | | {vfptr}
+  20	| | | a
+  24	| | | b
+  	| | +---
+  28	| | d
+  	| +---
+  32	| e
+  	+---
+  
+  DerivedDerivedClass::$vftable@DerivedClass1@:
+  	| &DerivedDerivedClass_meta
+  	|  0
+   0	| &DerivedDerivedClass::VirtualFunction 
+  
+  DerivedDerivedClass::$vftable@DerivedClass2@:
+  	| -16
+   0	| &thunk: this-=16; goto DerivedDerivedClass::VirtualFunction 
+  
+  DerivedDerivedClass::VirtualFunction this adjustor: 0
+  MemoryLayout.vcxproj -> E:\code\MemoryLayout\Debug\MemoryLayout.exe

@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/*
+
+    需配合mycheckbox.js使用
+
+    html:
+
+        <div class="my_checkbox_item">
+            <div id="checkbox1" class="my_checkbox"></div>
+            <label class="my_checkbox_label" for="checkbox1">checkbox1</label>
+        </div>
+
+    js:
+
+        //判断某个checkbox是否选中
+        if ($("#checkbox1").hasClass("checked")){
+            console.log("checkbox1 is checked");
+        }
+
+        //设置某个checkbox选中
+        setMyCheckboxChecked(id);
+        //或者
+        $(selector).addClass("checked");
+
+        //设置某个checkbox未选中
+        setMyCheckboxUnchecked(id);
+        //或者
+        $(selector).removeClass("checked");
+
+ */
+
+.my_checkbox_item {
+    display: inline-block;
+    padding: 5px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.my_checkbox_label {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.my_checkbox {
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    margin: 0 5px;
+    width: 14px;
+    height: 14px;
+    background: rgba(167, 167, 177, 1);
+    border: 3px solid rgba(167, 167, 177, 1);
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.my_checkbox:after {
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    width: 10px;
+    height: 5px;
+    content: '';
+    background: transparent;
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px solid rgba(199, 199, 199, 0.7);
+    border-left: 2px solid rgba(199, 199, 199, 0.7);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.my_checkbox:hover:after {
+    border-color: rgba(255, 255, 255, 1)
+}
+
+.my_checkbox.checked {
+    border-color: blue;
+    background: blue;
+}
+
+.my_checkbox.checked:after {
+    border-color: rgba(255, 255, 255, 1)
+}
+
+.my_checkbox.disabled{
+    background: gray !important;
+    border-color:gray !important;
+}
+
+.my_checkbox.disabled:after{
+    border-color: rgba(199, 199, 199, 0.7) !important;
+}

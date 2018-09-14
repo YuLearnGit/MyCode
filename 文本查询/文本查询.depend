@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1510147414 source:e:\code\ÎÄ±¾²éÑ¯\main.cpp
+	<iostream>
+	<map>
+	<set>
+	<fstream>
+	<vector>
+	<string>
+	<sstream>
+

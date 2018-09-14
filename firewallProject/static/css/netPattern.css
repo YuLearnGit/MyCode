@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+.container{
+    margin-top: 5%;
+}
+
+.my_input_label{
+    width:100px !important;
+}

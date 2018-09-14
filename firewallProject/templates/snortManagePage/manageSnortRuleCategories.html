@@ -1,0 +1,74 @@
+		<!DOCTYPE html>
+		<html>
+		<head>
+		<meta charset="UTF-8">
+		<title>Snort规则</title>
+			<meta http-equiv="pragma" content="no-cache">
+			<meta http-equiv="cache-control" content="no-cache">
+			<meta http-equiv="expires" content="0">
+			<script type="text/javascript" src="../static/js/loadframe.js" ></script>
+			<link media="screen" type="text/css" href="../static/css/manageSnortRuleCategories.css" rel="stylesheet" ></link>
+			<script type="text/javascript" src="../static/js/jquery-1.8.2.min.js" ></script>
+			<script type="text/javascript" src="../static/js/manageSnortRuleCategories.js" ></script>
+			<script type="text/javascript" src="../static/js/float_div.js"></script><!--展示浮动div的函数，去除后无浮动div效果-->
+			<script type="text/javascript" src="../static/js/jquery.fs.tipper.js"></script><!--展示浮动div的函数，去除后无浮动div效果-->
+			<link  media="all" type="text/css" href="../static/css/jquery.fs.tipper.css" rel="stylesheet"></link><!--浮动div的出现位置等效果,去除后只在固定位置出现-->
+			<script type="text/javascript" src="../static/js/manageSnortRuleCategoriesFloatHelp.js"></script>
+			<link  media="screen" type="text/css" href="../static/css/manageSnortRuleCategoriesFloatHelp.css" rel="stylesheet"></link>
+		</head>
+		<body>
+			<div align="center">
+			<div class="div_body">
+				<div>
+					<h4>管理Snort规则分类</h4>
+					<table class="outside">
+						<tr>
+							<td class="item"><label class="">已有类别</label>
+							</td>
+							<td><label class="">类别名：</label>
+							</td>
+							<td class="left"><select id="categories" style="width:200px;"></select>
+							</td>
+							<td class="action"><button id="reload" class="action">刷新</button>
+							</td>
+						</tr>
+						<tr>
+							<td  class="item"><label class="">添加</label>
+							</td>
+							<td><label class="">类别名：</label>
+							</td>
+							<td class="left"><input id="add_category" type="text" style="width:200px;">
+							</td>
+							<td class="action"><button id="add" class="action">添加到分类中</button>
+							</td>
+						</tr>
+						<tr>
+							<td  class="item"><label class="">删除</label>
+							</td>
+							<td><label class="">类别名：</label>
+							</td>
+							<td class="left"><input id="drop_category" type="text" style="width:200px;"> 
+							</td>
+							<td class="action"><button id="drop" class="action">从分类中删除</button>
+							</td>
+						</tr>
+						<tr>
+							<td  class="item"><label class="">重命名</label>
+							</td>
+							<td><label>旧名：</label><br><label>新名：</label>
+							</td>
+							<td class="left"><input id="old_category" type="text" style="width:200px;"><br><input id="new_category" type="text" style="width:200px;">
+							</td>
+							<td class="action"><button id="rename" class="action">重命名</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div>
+				<span id="hint" style="color:red;"></span>
+				</div>
+				</div>
+			</div>
+		</body>
+			
+		</html>

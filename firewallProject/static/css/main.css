@@ -1,0 +1,375 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    letter-spacing: 1px;
+}
+
+ul {
+    list-style: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.default_cursor {
+    cursor: default;
+}
+
+body {
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 600px;
+    min-width: 1000px;
+    font-family: "幼圆", sans-serif, courier, monospace;
+}
+
+#header {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+
+}
+
+div.header_div {
+    height: 49px;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+/*menu_btn*/
+div.menu_div {
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+
+div.menu_btn {
+    position: relative;
+    top: 11px;
+    left: 9px;
+    width: 28px;
+    height: 24px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.25);
+}
+
+div.menu_btn:hover {
+    border-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.5);
+}
+
+div.menu_btn:active {
+    background: #505050;
+}
+
+div.menu_btn_div {
+    position: relative;
+    top: 3px;
+    margin: auto;
+    text-align: center;
+    width: 20px;
+    height: 18px;
+    background: inherit;
+}
+
+div.menu_wire {
+    position: relative;
+    background: white;
+    opacity: 1;
+    float: left;
+    width: 20px;
+    height: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/*logo*/
+div.logo_div {
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    left: 10px;
+
+}
+
+.logo_img {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*标题*/
+.title_div {
+    position: relative;
+    float: left;
+    width: auto;
+    min-width: 100px;
+    height: 50px;
+    margin: auto;
+    left: 20px;
+}
+
+.title_text {
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+/*退出登录*/
+.logout_div {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    float: right;
+}
+
+i.logout_img {
+    display: inline;
+    background: url("../image/menu_icon.png");
+    position: relative;
+    width: 16px;
+    height: 16px;
+    float: left;
+    background-position: -128px 0;
+    top: 17px;
+    left: 17px;
+}
+
+#body {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /*height: 100%;*/
+    min-height: 400px;
+
+}
+
+#layout {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#left_layout {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 200px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+#right_layout {
+    position: relative;
+    margin-left: 200px;
+    height: 100%;
+}
+
+#main_content {
+    width: 100% !important;
+    height: 100%;
+}
+
+.one_menu_img_div {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left;
+}
+
+i.one_menu_img {
+    display: inline;
+    background: url("../image/menu_icon.png");
+    position: relative;
+    top: 17px;
+    left: 17px;
+    width: 16px;
+    height: 16px;
+    float: left;
+}
+
+i.one_menu_img_accountManage {
+    background-position: 0 0;
+}
+
+i.one_menu_img_networkManage {
+    background-position: -16px 0;
+}
+
+i.one_menu_img_daqManage {
+    background-position: -32px 0;
+}
+
+i.one_menu_img_iptablesManage {
+    background-position: -49px 0;
+}
+
+i.one_menu_img_snortManage {
+    background-position: -64px 0;
+}
+
+i.one_menu_img_help {
+    background-position: -80px 0;
+}
+
+i.one_menu_img_about {
+    background-position: -96px 0;
+}
+
+i.one_menu_img_setting {
+    background-position: -112px 0;
+}
+
+.small_menu_div {
+    width: 150px;
+    margin-left: 50px;
+    z-index: 10;
+}
+
+.one_menu_text_div {
+    height: 50px;
+    width: 150px;
+}
+
+.one_menu_text {
+    position: relative;
+    left: 10px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.one_menu_div {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    z-index: 10;
+    min-height: 50px;
+    border-right: 1px solid black;
+}
+
+.two_menu_ul {
+    position: relative;
+    z-index: 10;
+    margin-left: -50px;
+    display: none;
+    /*border-bottom: 1px solid black;*/
+}
+
+.two_menu_div {
+    border-right: 1px solid black;
+    border-top: 1px solid white;
+}
+
+.two_menu_text_div:before, .two_menu_text_div:after {
+    display: inline-block;
+    position: relative;
+    float: left;
+    content: "";
+    border: 1px dotted transparent;
+    width: 0;
+    height: 0;
+    left:5px;
+    background: transparent;
+}
+.two_menu_text_div:before{
+    top: 0;
+    padding:19px 0;
+    border-right-color: white;
+}
+.two_menu_text_div.black_case:before{
+    border-right-color: black;
+}
+
+.two_menu_text_div:after{
+    top: 20px;
+    padding: 0 9px;
+    border-top-color: white;
+}
+.two_menu_text_div.black_case:after{
+    border-top-color: black;
+}
+.two_menu_text_div {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 10px;
+}
+.two_menu_text_div span{
+    padding-left: 10px;
+}
+
+.two_menu_text {
+    line-height: 40px;
+    height: 40px;
+}
+
+.little_triangle_div {
+    position: relative;
+    float: right;
+    border-top: 7px solid transparent;
+    border-left: 7px solid white;
+    border-bottom: 7px dashed transparent;
+    width: 0;
+    height: 0;
+    right: 10px;
+    z-index: 10;
+    top: 18px;
+}
+
+iframe {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    scroll-padding-left: 10px;
+}
+
+.test {
+    position: absolute;
+    margin-right: 20px;
+    /*background: red;*/
+    z-index: 20;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 8px solid blue;
+    border-bottom: 8px solid transparent;
+    top: 100px;
+    left: 200px;
+    display: none;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <script type="text/javascript" src="../static/js/loadframe.js"></script>
+    <script type="text/javascript" src="../static/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            function test() {
+                console.log("test");
+                $.ajax({
+                    type: "POST",
+                    url: "/test",
+                    data: {
+                        "method": "t"
+                    },
+                    success: function (data) {
+                        if (data.success) {
+                            alert(data.success);
+                            $("span#hint").text(data.success);
+                            console.log(data);
+                            delete_row(trele);
+                        }
+                        else if (data.error) {
+                            $("span#hint").text(data.error);
+                        }
+                        else if (data.href) {
+                            window.location.href = data.href;
+                        }
+                        else if (data.page) {
+                            window.location.href = data.page;
+                        }
+                        else if (data.login) {
+                            window.location.href = data.login;
+                        }
+                        else {
+                            alert(data);
+                            console.log(data);
+                        }
+                    },
+                    error: function (e) {
+                        console.log(e);
+                        var error = "请求错误，错误码：" + e.status;
+                        alert(error);
+                        $("span#hint").text(error);
+                    }
+                });
+            }
+
+            function post_test() {
+                console.log("post_test");
+                $.ajax({
+                    type: "POST",
+                    url: "/test",
+                    data: {
+                        "method": "p",
+                        "test": "now"
+                    },
+                    success: function (data) {
+                        if (data.success) {
+                            alert(data.success);
+                            $("span#hint").text(data.success);
+                            console.log(data);
+                            delete_row(trele);
+                        }
+                        else if (data.error) {
+                            $("span#hint").text(data.error);
+                        }
+                        else if (data.href) {
+                            window.location.href = data.href;
+                        }
+                        else if (data.page) {
+                            window.location.href = data.page;
+                        }
+                        else if (data.login) {
+                            window.location.href = data.login;
+                        }
+                        else {
+                            alert(data);
+                            console.log(data);
+                        }
+                    },
+                    error: function (e) {
+                        console.log(e);
+                        var error = "请求错误，错误码：" + e.status;
+                        alert(error);
+                        $("span#hint").text(error);
+                    }
+                });
+            }
+
+            $("#post_test").click(function () {
+                post_test();
+            });
+
+            $("#test").click(function () {
+                test();
+            });
+        });
+    </script>
+</head>
+<body>
+<div align="center">
+    <div><h3>欢迎使用！</h3></div>
+    <div><h3>非常感谢您选择我们的产品。</h3></div>
+    <div><h3>有任何问题或建议，欢迎拨打182****5460</h3></div>
+    <div style="display:none">
+        <button id="test">测试</button>
+        <button id="post_test">提交</button>
+    </div>
+    <div><span id="hint"></span></div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1533608394 source:e:\code\virtual func\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+

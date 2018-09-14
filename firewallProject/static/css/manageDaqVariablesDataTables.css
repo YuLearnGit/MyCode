@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+table#daq_variables{
+	/*font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;*/
+	width:100%;
+	border-collapse:collapse;
+}
+
+table#daq_variables thead th{
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:4px;
+	background-color:#323232;
+	color:#ffffff;
+	border:1px solid #dddddd;
+}
+
+table#daq_variables tbody td{
+	word-spacing: normal;
+	word-wrap:break-word;
+	border:1px solid #dddddd;
+}
+
+table#daq_variables tbody tr{
+	width:100%;
+}
+
+.dataTables_wrapper .dataTables_length{
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	padding-right:10px;
+	float:right;
+}
+
+.dataTables_wrapper .dataTables_info{
+	padding-left:10px;
+	padding-right:10px;
+	float:right;
+}
+
+.dataTables_wrapper .dataTables_filter{
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	padding-right:10px;
+	float:right;
+}
+
+.dataTables_wrapper .dataTables_paginate{
+	padding-right:10px;
+	float:right;
+}
+
+.dataTables_wrapper #load_div{
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	float:left;
+	padding-left:10px;
+}

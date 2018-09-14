@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/*
+    示例：
+
+    html:
+        <div class="my_input_div">
+            <label for="username" class="my_input_label">用户名：</label>
+            <input id="username" type="text" class="my_input_text" maxlength="20">
+        </div>
+
+ */
+.my_input_div {
+    font-size: 0;
+}
+
+.my_input_label {
+    position: relative;
+    display: inline-block;
+    color: white;
+    letter-spacing:1px;
+    background-color: darkslateblue;
+    /*border-top-left-radius: 10px;*/
+    /*border-bottom-left-radius: 10px;*/
+    border: 1px solid darkslateblue;
+    line-height: 28px;
+    font-size: 16px;
+    width: 80px;
+    padding-left: 5px;
+    height: 28px;
+    margin: 5px 0;
+    text-align: right;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.my_input_text {
+    position: relative;
+    /*border-top-right-radius: 10px;*/
+    /*border-bottom-right-radius: 10px;*/
+    line-height: 27px;
+    font-size: 16px;
+    width: 200px;
+    height: 27px;
+    border: 1px solid darkslateblue;
+    margin: 5px 0 5px -1px;
+    padding: 0 0 0 2px;
+}
+
+.my_input_text:focus {
+    outline-style: none;
+    border-color: red;
+}

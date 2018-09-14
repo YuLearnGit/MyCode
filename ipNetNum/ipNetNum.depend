@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1506153662 source:e:\code\ipnetnum\main.cpp
+	<iostream>
+	<sstream>
+	<vector>
+	<math.h>
+

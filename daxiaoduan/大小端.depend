@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1534770701 source:e:\code\¥Û–°∂À\main.cpp
+	<iostream>
+	<typeinfo>
+
+1535094139 source:e:\code\daxiaoduan\main.cpp
+	<iostream>
+	<typeinfo>
+	<bitset>
+	<algorithm>
+

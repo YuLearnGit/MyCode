@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>添加Iptables规则</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<script type="text/javascript" src="../static/js/loadframe.js" ></script>
+	<link media="screen" type="text/css" href="../static/css/addIptablesRules.css" rel="stylesheet" ></link>
+	<script type="text/javascript" src="../static/js/jquery-1.8.2.min.js" ></script>
+	<script type="text/javascript" src="../static/js/addIptablesRules.js" ></script>
+	<script type="text/javascript" src="../static/js/float_div.js"></script><!--展示浮动div的函数，去除后无浮动div效果-->
+	<script type="text/javascript" src="../static/js/jquery.fs.tipper.js"></script><!--展示浮动div的函数，去除后无浮动div效果-->
+	<link  media="all" type="text/css" href="../static/css/jquery.fs.tipper.css" rel="stylesheet"></link><!--浮动div的出现位置等效果,去除后只在固定位置出现-->
+	<script type="text/javascript" src="../static/js/addIptablesRulesFloatHelp.js"></script>
+	<link  media="screen" type="text/css" href="../static/css/addIptablesRulesFloatHelp.css" rel="stylesheet"></link>
+</head>
+<body>
+	<div align="center">
+		<div class="div_body">
+		<div>
+			<h4>添加Iptables规则</h4>
+			<table class="outside">
+				<caption align="center">规则备注</caption>
+				<!-- <tr>
+					<td class="right" style="width:100px;" ><label class="tipped">归类到：</label></td>
+					<td style="width:200px"><select id="categories" style="width:98%">
+						</select></td>
+					<td class="left" style="width:100px;"><button id="manage_categories"><label class="tipped">管理我的分类</label></button></td>
+					<td class="left" style="width:100px;"><button id="reload_categories"><label class="tipped">刷新</label></button></td>
+				</tr> -->
+				<tr>
+					<td class="right" style="width:100px;" ><label id="comment_label" class="tipped">备注：</label></td>
+					<td class="left" colspan="2"><input id="comment" type="text" style="width:98%"></td>
+					<td></td>
+				</tr>
+			</table>
+			<table class="outside">
+				<caption align="center">iptables规则模板</caption>
+				<tr>
+					<td class="right"><label id="append_table_label" class="tipped" >添加到表：</label></td>
+					<td class="left">
+						<select id="append_table" name="append_table">
+							<option value="filter">filter</option>
+							<option value="nat">nat</option>
+							<option value="mangle">mangle</option>
+							<option value="raw">raw</option>
+							<!--<option value="security">security</option>-->
+						</select>
+					</td>
+					<td colspan="2"></td>
+					<td class="right"><label id="append_chain_label" class="tipped" >添加到链：</label></td>
+					<td class="left">
+						<select id="append_chain" name="append_chain">
+							<option value="INPUT">INPUT</option>
+							<option value="OUTPUT">OUTPUT</option>
+							<option value="FORWARD">FORWARD</option>
+							<option value="PREROUTING">PREROUTING</option>
+							<option value="POSTROUTING">POSTROUTING</option>
+						</select>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="right"><label id="protocol_label" class="tipped">协议：</label></td>
+					<td class="left">
+						<select id="protocol" name="protocol">
+							<option value="0">不指定</option>
+							<option value="tcp">tcp</option>
+							<option value="icmp">icmp</option>
+							<option value="ip">ip</option>
+							<option value="udp">udp</option>
+						</select>
+					</td>
+					<td colspan="2"></td>
+					<td class="right"><label id="ip_version_label" class="tipped">IP版本：</label></td>
+					<td class="left">
+						<select id="ip_version" name="">
+							<option value="0">不指定</option>
+							<option value="ipv4">ipv4</option>
+							<option value="ipv6">ipv6</option>
+						</select>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="1" class="right"><label id="src_ip_label" class="tipped">源地址：</label></td>
+					<td colspan="2"><input id="src_ip" type="text"></td>
+					<td rowspan="2" style="border-right:solid #000000 1px;border-left:solid #000000 1px"><button id="change_src_dst"><label id="change_src_dst_label" class="tipped">&lt;--&gt;</label></button></td>
+					<td colspan="1" class="right"><label id="dst_ip_label" class="tipped">目的地址：</label></td>
+					<td colspan="2"><input id="dst_ip" type="text"></td>
+				</tr>
+				<tr>
+					<td colspan="1" class="right"><label id="src_port_label" class="tipped">源端口：</label></td>
+					<td colspan="2"><input id="src_port" type="text"></td>
+					<td colspan="1" class="right"><label id="dst_port_label" class="tipped">目的端口：</label></td>
+					<td colspan="2"><input id="dst_port" type="text"></td>
+				</tr>
+				<tr>
+					<td class="right"><label id="in_interface_label" class="tipped">入口网卡：</label></td>
+					<td class="left">
+						<select id="in_interface" name="in_interface">
+							<option value="0">不指定</option>
+							<option value="eth0">eth0</option>
+							<option value="wlan0">wlan0</option>
+							<option value="lo">lo</option>
+						</select>
+					</td>
+					<td colspan="2"></td>
+					<td class="right"><label id="out_interface_label" class="tipped">出口网卡：</label></td>
+					<td class="left">
+						<select id="out_interface" name="interface">
+							<option value="0">不指定</option>
+							<option value="eth0">eth0</option>
+							<option value="wlan0">wlan0</option>
+							<option value="lo">lo</option>
+						</select>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="right"><label id="other1_label" class="tipped">其它参数1：</label></td>
+					<td colspan="6"><input id="other1" type="text" style="width:98%"></td>
+				</tr>
+				<tr>
+					<td class="right"><label id="target_label" class="tipped" >动作：</label></td>
+					<td class="left">
+						<select id="target" name="target">
+							<option value="ACCEPT">ACCEPT</option>
+							<option value="DROP">DROP</option>
+							<option value="RETURN">RETURN</option>
+						</select>
+					</td>
+					<td class="right"><label id="other2_label" class="tipped">其它参数2：</label></td>
+					<td colspan="4"><input id="other2" type="text" style="width:98%"></td>
+				</tr>
+			</table>
+		<div>	
+			<div align="left">
+				<span style="color:red">
+				<!--
+					<div>*配置原则：填写VPN服务器IP、登录帐户名、登录密码，点击提交按钮</div>
+					<div>*测试：点击测试按钮查看是否配置成功，测试时间可能较长</div>
+					<div>*提示：可点击撤销按钮，撤销修改</div>-->
+				</span>
+			</div>
+		</div>
+		<div>	
+			<div>
+				<br><span id="hint" style="color:red;word-wrap:break-word;"></span><br>
+			</div>
+		</div>
+		<br>
+		<div>	
+			<div align="right">
+			<!--	<button id="back" >上一步</button>&nbsp;&nbsp;&nbsp;&nbsp; -->
+			<!--	<button id="reload" >刷新</button>&nbsp;&nbsp;&nbsp;&nbsp; -->
+			<!--	<button id="cancel">撤销</button>&nbsp;&nbsp;&nbsp;&nbsp; -->
+				<button id="clean">清空</button>&nbsp;&nbsp;&nbsp;&nbsp;
+				<button id="post" >提交</button>&nbsp;&nbsp;&nbsp;&nbsp;
+			<!--	<button id="connect" >连接</button>&nbsp;&nbsp;&nbsp;&nbsp;-->
+			<!--	<button id="disconnect" >断开</button>&nbsp;&nbsp;&nbsp;&nbsp;-->
+			<!--	<button id="test" >测试</button>&nbsp;&nbsp;&nbsp;&nbsp; -->
+			<!--	<button id="next" >下一步</button> -->
+			</div>
+		</div>
+		<div style="width:100%;height:200px;">
+			
+		</div>
+		</div>
+	</div>
+</body>
+	
+</html>

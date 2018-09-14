@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1529913792 source:e:\code\Œª”Ú\main.cpp
+	<iostream>
+
+1529933409 source:e:\code\weiyu\main.cpp
+	<iostream>
+	<memory.h>
+

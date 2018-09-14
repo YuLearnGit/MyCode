@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/*.one_menu_background_class {*/
+    /*background-color: #ff6161;*/
+/*}*/
+
+/*.one_menu_background_class:hover {*/
+    /*background-color: #444444;*/
+/*}*/
+
+.theme_background_color {
+    background-color: #2c2c2c;
+}
+
+.theme_font_color {
+    color: #ffffff;
+}
+
+.theme_split_line_color {
+    background-color: #444444;
+}
+
+.theme_font {
+    font-family: '幼圆', courier, sans-serif, monospace;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*.theme_background_color_hover_black:hover{*/
+/*background-color: #444444;*/
+/*}*/
+
+/*.theme_background_color_hover_white:hover{*/
+/*background-color: #dddddd;*/
+
+/*}*/
+
+/*.theme_line_separator_color_black{*/
+
+/*}*/

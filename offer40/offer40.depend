@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1528122018 source:e:\code\offer40\main.cpp
+	<iostream>
+	<vector>
+	<map>
+

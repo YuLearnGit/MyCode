@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1507709109 source:e:\code\containers\main.cpp
+	<iostream>
+	<vector>
+	<set>
+	<map>
+	<fstream>
+	<string>
+	<sstream>
+
+1507692196 source:e:\code\containers\src\wordtransform.cpp
+	"wordTransform.h"
+
+1507703360 e:\code\containers\include\wordtransform.h
+	<fstream>
+	<string>
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置</title>
+    <script type="text/javascript" src="../static/js/loadframe.js"></script>
+    <link media="screen" type="text/css" href="../static/css/setting.css" rel="stylesheet">
+    <script type="text/javascript" src="../static/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.rotate.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.minicolors.min.js"></script>
+    <link type="text/css" href="../static/css/jquery.minicolors.css" rel="stylesheet">
+    <script type="text/javascript" src="../static/js/myAjax.js"></script>
+    <script type="text/javascript" src="../static/js/setting_theme.js"></script>
+    <script type="text/javascript" src="../static/js/setting.js"></script>
+</head>
+<body>
+<div class="body">
+    <div class="container">
+        <div class="theme_setting setting_div">
+            <div class="theme_setting_button setting_button_div">
+                <span id="theme_setting" class="setting_button_text">主题设置</span>
+                <div class="little_triangle_div"></div>
+            </div>
+            <div class="setting_box">
+                <div class="setting_box_item">
+                    <label for="choose_background_color" class="setting_item_text">背景色：</label>
+                    <input id="choose_background_color" class="choose_color" type="text">
+                </div>
+                <div class=" setting_box_item">
+                    <label for="choose_hover_background_color" class="setting_item_text">悬停背景色：</label>
+                    <input id="choose_hover_background_color" class="choose_color" type="text">
+                </div>
+                <div class=" setting_box_item">
+                    <label for="choose_font_color" class="setting_item_text">字体颜色：</label>
+                    <input id="choose_font_color" class="choose_color" type="text">
+                </div>
+                <div class=" setting_box_item">
+                    <label for="choose_split_line_color" class="setting_item_text">分割线颜色：</label>
+                    <input id="choose_split_line_color" class="choose_color" type="text">
+                </div>
+                <div class=" setting_box_item">
+                    <label for="font_select" class="setting_item_text">字体：</label>
+                    <select id="font_select" class="font_select">
+
+                        <!--标准字体-->
+                        <option>Adobe Arabic</option>
+                        <option>Adobe Caslon Pro</option>
+                        <option>Adobe Caslon Pro Bold</option>
+                        <option>Adobe Devanagari</option>
+                        <option>Adobe Garamond Pro</option>
+                        <option>Adobe Garamond Pro Bold</option>
+                        <option>Adobe Gothic Std B</option>
+                        <option>Adobe Hebrew</option>
+                        <option>Consolas</option>
+                        <option>MS Gothic</option>
+                        <option>MS Mincho</option>
+                        <option>MS Outlook</option>
+                        <option>MS PGothic</option>
+                        <option>MS PMincho</option>
+                        <option>MS Reference Sans Serif</option>
+                        <option>MS Reference Specialty</option>
+                        <option>MS Sans Serif</option>
+                        <option>MS Serif</option>
+                        <option>MS UI Gothic</option>
+                        <option>Microsoft Himalaya</option>
+                        <option>Microsoft JhengHei</option>
+                        <option>Microsoft JhengHei UI</option>
+                        <option>Microsoft New Tai Lue</option>
+                        <option>Microsoft PhagsPa</option>
+                        <option>Microsoft Sans Serif</option>
+                        <option>Microsoft Tai Le</option>
+                        <option>Microsoft Uighur</option>
+                        <option>Microsoft YaHei UI</option>
+                        <option>Microsoft Yi Baiti</option>
+                        <option>仿宋</option>
+                        <option>华文中宋</option>
+                        <option>华文仿宋</option>
+                        <option>华文宋体</option>
+                        <option>华文彩云</option>
+                        <option>华文新魏</option>
+                        <option>华文楷体</option>
+                        <option>华文琥珀</option>
+                        <option>华文细黑</option>
+                        <option>华文行楷</option>
+                        <option>华文隶书</option>
+                        <option>宋体</option>
+                        <option>幼圆</option>
+                        <option>微软雅黑</option>
+                        <option>新宋体</option>
+                        <option>方正姚体</option>
+                        <option>方正舒体</option>
+                        <option>楷体</option>
+                        <option>等线</option>
+                        <option>隶书</option>
+                        <option>黑体</option>
+                        <!--serif字体-->
+
+                    </select>
+                </div>
+                <div class="theme_font_div setting_box_item">
+                    <div class="setting_item_text">效果预览：</div>
+                    <div class="preview_div theme_background_color theme_hover_background_color">
+                        <div class="preview_text theme_font_color theme_font">物联网防火墙功能配置系统</div>
+                        <div class="preview_split_line theme_split_line_color"></div>
+                        <div class="preview_text theme_font_color theme_font">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+                        <div class="preview_split_line theme_split_line_color"></div>
+                        <div class="preview_text theme_font_color theme_font">abcdefghijklmnopqrstuvwxyz</div>
+                        <div class="preview_split_line theme_split_line_color"></div>
+                        <div class="preview_text theme_font_color theme_font">1234567890</div>
+                    </div>
+                </div>
+                <div class="setting_box_item">
+                    <div class="setting_item_buttons_div">
+                        <div class="setting_item_buttons">
+                            <div id="default_theme_example" class="theme_example" title="默认主题">主题1</div>
+                            <div id="black_theme_example" class="theme_example" title="黑色主题">主题2</div>
+                            <div id="blue_black_theme_example" class="theme_example" title="蓝黑主题">主题3</div>
+                            <div id="gray_theme_example" class="theme_example" title="灰色主题">主题4</div>
+                            <div id="saved_theme" class="theme_example" title="已保存在服务器的主题">已保存主题</div>
+                            <div id="theme_confirm_button" class="setting_item_button" title="点击应用按钮，将保存并应用新主题">应用</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

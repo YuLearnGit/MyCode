@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>添加Snort规则</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<script type="text/javascript" src="../static/js/loadframe.js" ></script>
+	<link media="screen" type="text/css" href="../static/css/addSnortRules.css" rel="stylesheet" ></link>
+	<script type="text/javascript" src="../static/js/jquery-1.8.2.min.js" ></script>
+	<script type="text/javascript" src="../static/js/addSnortRules.js" ></script>
+	<script type="text/javascript" src="../static/js/float_div.js"></script><!--展示浮动div的函数，去除后无浮动div效果-->
+	<script type="text/javascript" src="../static/js/jquery.fs.tipper.js"></script><!--展示浮动div的函数，去除后无浮动div效果-->
+	<link  media="all" type="text/css" href="../static/css/jquery.fs.tipper.css" rel="stylesheet"></link><!--浮动div的出现位置等效果,去除后只在固定位置出现-->
+	<script type="text/javascript" src="../static/js/addSnortRulesFloatHelp.js"></script>
+	<link  media="screen" type="text/css" href="../static/css/addSnortRulesFloatHelp.css" rel="stylesheet"></link>
+</head>
+<body>
+	<div align="center">
+		<div class="div_body">
+		<div>
+			<h4>添加Snort规则</h4>
+			<table class="outside">
+				<caption align="center">规则分类和备注</caption>
+				<tr>
+					<td class="right" style="width:100px;" ><label id="categories_label" class="tipped">归类到：</label></td>
+					<td style="width:200px"><select id="categories" style="width:98%">
+						</select></td>
+					<td class="left" style="width:100px;"><button id="manage_categories"><label id="manage_categories_label" class="tipped">管理我的分类</label></button></td>
+					<td class="left" style="width:100px;"><button id="reload_categories"><label id="reload_categories_label" class="tipped">刷新</label></button></td>
+				</tr>
+				<tr>
+					<td class="right" style="width:100px;" ><label id="comment_label" class="tipped">备注：</label></td>
+					<td class="left" colspan="2"><input id="comment" type="text" style="width:98%"></td>
+					<td></td>
+				</tr>
+			</table>
+			<table class="outside">
+				<caption align="center">规则头模板</caption>
+				<tr>
+					<td class="right"><label id="action_label" class="tipped  red" >动作：</label></td>
+					<td class="left">
+						<select id="action" name="action">
+							<option value="alert">报警</option>
+							<option value="log">记录</option>
+							<option value="pass">通过</option>
+							<option value="drop">丢弃</option>
+							<option value="reject">拒绝</option>
+						</select>
+					</td>
+					<td class="right"><label id="protocol_label" class="tipped  red" >协议：</label></td>
+					<td class="left">
+						<select id="protocol" name="protocol">
+							<option value="tcp">TCP</option>
+							<option value="icmp">ICMP</option>
+							<option value="ip">IP</option>
+							<option value="udp">UDP</option>
+						</select>
+					</td>
+					<td class="right"><label id="direction_label" class="tipped red">方向：</label>
+					</td>
+					<td class="left">
+						<select id="direction" name="direction">
+							<option value="right"> -&gt; </option>
+							<!--<option value="left"> <- </option> -->
+							<option value="both"> &lt;&gt; </option>
+						</select>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="1" class="right"><label id="src_ip_label" class="tipped red">源地址：</label></td>
+					<td colspan="2"><input id="src_ip" type="text"></td>
+					<td rowspan="2" style="border-right:solid #000000 1px;border-left:solid #000000 1px"><button id="change_src_dst"><label id="change_src_dst_label" class="tipped">&lt;--&gt;</label></button></td>
+					<td colspan="1" class="right"><label id="dst_ip_label" class="tipped red">目的地址：</label></td>
+					<td colspan="2"><input id="dst_ip" type="text"></td>
+				</tr>
+				<tr>
+					<td colspan="1" class="right"><label id="src_port_label" class="tipped red">源端口：</label></td>
+					<td colspan="2"><input id="src_port" type="text"></td>
+					<td colspan="1" class="right"><label id="dst_port_label" class="tipped red">目的端口：</label></td>
+					<td colspan="2"><input id="dst_port" type="text"></td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<table class="outside">
+				<caption>规则选项模板</caption>
+				<tr>
+					<td class="right" style="width:120px;"><label id="classtype_label" class="tipped">类型：</label></td>
+					<td  colspan="2" class="left"><select id="classtype">
+						<option value="0">不使用</option>
+						<option value="attempted-admin">attempted-admin</option>
+						<option value="attempted-user">attempted-user</option>
+						<option value="inapproprivate-content">inapproprivate-content</option>
+						<option value="policy-violation">policy-violation</option>
+						<!--<option value="write">自定义</option>-->
+					</select></td>
+					<td colspan="1" class="right"><label id="flow_label" class="tipped">流：</label></td>
+					<td colspan="2" class="left"><select id="flow_1">
+						<option value="0">不使用</option>
+						<option value="established">established</option>
+						<option value="not_established">not_established</option>
+						<option value="stateless">stateless</option>
+					</select></td>
+					<td colspan="2" class="left"><select id="flow_2">
+						<option value="0">不使用</option>
+						<option value="to_client">to_client</option>
+						<option value="to_server">to_server</option>
+						<option value="from_client">from_client</option>
+						<option value="from_server">from_server</option>
+					</select></td>
+				</tr>
+				<tr class="content_tr">
+					<td class="right"><label id="content_label" class="tipped">匹配内容：</label></td>
+					<td colspan="4"><input id="content" class="content" type="text" style="width:98%" value="&quot;&quot;"></td>
+					<td colspan="2"><input id="nocase" class="nocase" type="checkbox" ><label id="nocase_label" class="tipped">忽略大小写</label></td>
+					<td colspan="1"><button id="add_content_tr" class="tipped" style="width:25px;text-align:center;"><label>+</label></button></td>
+				</tr>
+				<tr>
+					<td class="right"><label id="offset_label" class="tipped" style="width:98%">匹配起始位置：</label></td>
+					<td class="left"><input id="offset" type="text" style="width:30px"></td>
+					
+					<td class="right"><label id="depth_label" class="tipped">匹配深度：</label></td>
+					<td class="left"><input id="depth" type="text" style="width:30px"></td>
+					<td colspan="4"></td>
+				</tr>
+				<tr>
+                    <td class="right"><label id="sid_label" class="tipped red">规则编号：</label></td>
+					<td colspan="1" class="left" ><input id="sid" type="text" style="width:60px"></td>
+					<td class="right"><label id="gid_label" class="tipped">生成编号：</label></td>
+					<td colspan="1" class="left" ><input id="gid" type="text" style="width:60px"></td>
+					<td class="right"><label id="rev_label" class="tipped">版本号：</label></td>
+					<td colspan="1" class="left"><input id="rev" type="text"   style="width:30px"></td>
+					<td class="right"><label id="priority" class="tipped">优先级：</label></td>
+					<td colspan="1" class="left" ><input id="priority" type="text" style="width:30px"></td>
+				</tr>
+				<tr>
+					<td class="right"><label id="msg_label" class="tipped">消息：</label></td>
+					<td colspan="7"><input id="msg" type="text" style="width:98%"></td>
+				</tr>
+				<tr>
+					<td class="right"><label id="other_label" class="tipped">其它选项：</label></td>
+					<td colspan="7"><input id="other" type="text" style="width:98%"></td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<table class="outside">
+				<caption>高级选项</caption>
+				<tr>
+					<td><input id="modbustcp" type="checkbox"><label id="modbustcp_label" for="modbustcp" class="tipped">modbusTcp:</label></td>
+					<td>
+						<table>
+							<tr>
+								<td><label id="modbus_func_label" class="tipped">匹配功能码：</label></td>
+								<td class="left"><select id="modbus_func">
+									<option value="0"								>不使用</option>
+									<option value="read_coils"						>01：读线圈</option>
+									<option value="read_discrete_inputs"			>02：读离散输入量</option>
+									<option value="read_holding_registers"			>03：读保持寄存器</option>
+									<option value="read_input_registers"			>04：读输入寄存器</option>
+									<option value="write_single_coil"				>05：写单个线圈</option>
+									<option value="write_single_register"			>06：写单个寄存器</option>
+									<option value="read_exception_status"			>07：读取异常状态</option>
+									<option value="diagnostics"						>08：回送诊断校验</option>
+									<option value="get_comm_event_counter"			>11：读取事件计数</option>
+									<option value="get_comm_event_log"				>12：读取通信事件记录</option>
+									<option value="write_multiple_coils"			>15：写多个线圈</option>
+									<option value="write_multiple_registers"		>16：写多个寄存器</option>
+									<option value="report_slave_id"					>17：报告从机标识</option>
+									<option value="read_file_record"				>20：读文件记录</option>
+									<option value="write_file_record"				>21：写文件记录</option>
+									<option value="mask_write_register"				>22：屏蔽写寄存器</option>
+									<option value="read_write_multiple_registers"	>23：读/写多个寄存器</option>
+								</select></td>
+							</tr>
+							<tr>
+								<td class="right"><label id="modbus_unit_label" class="tipped">匹配Unit：</label></td>
+								<td><input id="modbus_unit" type="text"></td>
+							</tr>
+							<tr>
+								<td class="right"><label id="modbus_data_label" class="tipped">匹配Data：</label></td>
+								<td><input id="modbus_data" type="text"></td>
+							</tr>
+						</table>
+					</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<div>	
+			<div align="left">
+				<span style="color:red">
+				<!--
+					<div>*配置原则：填写VPN服务器IP、登录帐户名、登录密码，点击提交按钮</div>
+					<div>*测试：点击测试按钮查看是否配置成功，测试时间可能较长</div>
+					<div>*提示：可点击撤销按钮，撤销修改</div>-->
+				</span>
+			</div>
+		</div>
+		<div>	
+			<div>
+				<br><span id="hint" style="color:red;word-wrap:break-word;"></span><br>
+			</div>
+		</div>
+		<br>
+		<div>	
+			<div align="right">
+			<!--	<button id="back" >上一步</button>&nbsp;&nbsp;&nbsp;&nbsp; -->
+			<!--	<button id="reload" >刷新</button>&nbsp;&nbsp;&nbsp;&nbsp; -->
+			<!--	<button id="cancel">撤销</button>&nbsp;&nbsp;&nbsp;&nbsp; -->
+				<button id="clean">清空</button>&nbsp;&nbsp;&nbsp;&nbsp;
+				<button id="post" >提交</button>&nbsp;&nbsp;&nbsp;&nbsp;
+			<!--	<button id="connect" >连接</button>&nbsp;&nbsp;&nbsp;&nbsp;-->
+			<!--	<button id="disconnect" >断开</button>&nbsp;&nbsp;&nbsp;&nbsp;-->
+			<!--	<button id="test" >测试</button>&nbsp;&nbsp;&nbsp;&nbsp; -->
+			<!--	<button id="next" >下一步</button> -->
+			</div>
+		</div>
+		<div style="width:100%;height:200px;">
+			
+		</div>
+		</div>
+	</div>
+</body>
+	
+</html>

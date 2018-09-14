@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1527647591 source:e:\code\offer38\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+

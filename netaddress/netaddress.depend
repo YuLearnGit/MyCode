@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1506146830 source:e:\code\netaddress\main.cpp
+	<iostream>
+	<sstream>
+	<vector>
+	<math.h>
+

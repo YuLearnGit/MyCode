@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2.联网方式</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <script type="text/javascript" src="../static/js/loadframe.js"></script>
+    <link media="screen" type="text/css" href="../static/css/common.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/myinput.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/mybutton.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/myradio.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/mycheckbox.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/mypagetitle.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/myhint.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/netPattern.css" rel="stylesheet">
+    <script type="text/javascript" src="../static/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../static/js/myradio.js"></script>
+    <script type="text/javascript" src="../static/js/mycheckbox.js"></script>
+    <script type="text/javascript" src="../static/js/netPattern.js"></script>
+</head>
+<body>
+<div class="body">
+    <div class="container">
+        <div class="my_page_title">2.联网方式</div>
+        <div>
+            <div class="my_radio_item">
+                <div id="wifi" class="my_radio checked default_net" name="default_net"></div>
+                <label class="my_radio_label" for="wifi">wifi</label>
+            </div>
+            <div class="my_radio_item">
+                <div id="mobile3g" class="my_radio default_net" name="default_net"></div>
+                <label class="my_radio_label" for="mobile3g">联通3g</label>
+            </div>
+        </div>
+        <div class="wifi">
+            <div class="my_input_div">
+                <label for="wifiname" class="my_input_label">wifi名称：</label>
+                <input id="wifiname" type="text" class="my_input_text" maxlength="20">
+            </div>
+            <div class="my_input_div">
+                <label for="wifipassword" class="my_input_label">wifi密码：</label>
+                <input id="wifipassword" type="text" class="my_input_text" maxlength="20">
+            </div>
+            <div class="my_checkbox_item">
+                <div id="ishidden" class="my_checkbox"></div>
+                <label class="my_checkbox_label wifi" for="ishidden">此wifi未开启SSID广播(即为隐藏wifi)</label>
+            </div>
+        </div>
+        <div class="mobile3g">
+            <div class="my_input_div">
+                <label for="" class="my_input_label">3g参数?：</label>
+                <input id="" type="text" class="my_input_text" maxlength="20">
+
+            </div>
+            <div class="my_input_div">
+                <label for="" class="my_input_label">3g参数?：</label>
+                <input id="" type="text" class="my_input_text" maxlength="20">
+            </div>
+        </div>
+        <div>
+            <div class="my_hint_div">
+                <span id="hint" class="my_hint"></span>
+            </div>
+        </div>
+        <div class="my_buttons">
+            <div id="back" class="my_button">上一步</div>
+            <div id="reload" class="my_button">刷新</div>
+            <div id="cancel" class="my_button">撤销</div>
+            <div id="post" class="my_button">提交</div>
+            <div id="test" class="my_button">测试</div>
+            <div id="next" class="my_button">下一步</div>
+        </div>
+        <div>
+            <div class="mobile3g my_help_msg_div">
+                <div class="my_help_msg">*配置原则：不知道</div>
+            </div>
+            <div class="wifi my_help_msg_div">
+                <div class="my_help_msg">* 配置原则：输入wifi名称和wifi密码（无密码可不填）。</div>
+                <div class="my_help_msg">* 测试：点击测试按钮查看是否配置成功，测试时间可能较长</div>
+                <div class="my_help_msg">* 提示：如果测试失败，下一步将无法测试</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

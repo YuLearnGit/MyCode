@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/*
+    自定义radio，替代系统input[type="radio"]
+    需配合myradio.js使用
+    使用示例：
+
+    html：
+        <div class="my_radio_item">
+            <div id="radio1" class="my_radio checked radio_test" name="my_name"></div>
+            <label class="my_radio_label" for="radio1">radio1</label>
+        </div>
+        <div class="my_radio_item">
+            <div id="radio2" class="my_radio radio_test" name="my_name"></div>
+            <label class="my_radio_label" for="radio2">radio2</label>
+        </div>
+
+    js:
+        //判断某个radio是否选中
+        if ($("#radio1").hasClass("checked")){
+            console.log("radio1 is checked");
+        }
+
+        //获取被选中的radio的id
+        $(".radio_test.checked").attr(id);
+        console.log("the checked radio id is " + id)
+
+        //设置某个radio被选中
+        setMyRadioChecked(id);
+        //或者
+        $(selector).trigger("click");
+
+ */
+.my_radio_item {
+    display: inline-block;
+    padding: 5px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.my_radio_label {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.my_radio {
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    background: rgba(167, 167, 177, 0.8);
+    border-radius: 10px;
+    padding: 5px;
+    border: 5px solid rgba(167, 167, 177, 1);
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.my_radio.checked {
+    background: white;
+    border-color: blue;
+}
+
+.my_radio:hover {
+    background: rgba(255, 255, 255, 1);
+}

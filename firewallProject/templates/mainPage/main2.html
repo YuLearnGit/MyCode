@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>管理</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<link media="screen" type="text/css" href="../static/css/main.css" rel="stylesheet" ></link>
+	<link media="screen" type="text/css" href="../static/css/nav.css" rel="stylesheet"></link>
+	<script type="text/javascript" src="../static/js/jquery-1.8.2.min.js" ></script>
+	<script type="text/javascript" src="../static/js/main.js" ></script>
+</head>
+<body>
+	<div id="body">
+		<div id="top">
+			<span id="web_title">物联网防火墙功能配置系统</span>
+			<span id="system_time">本地时间:<span id="current_time"></span></span>
+			<span><a id="logout" href="javascript:void(0)">退出登录</a></span>
+		</div>
+		
+		<div id="left">
+		<img id="logo_img" alt="图片加载失败" src="../static/image/logo_img.png">
+			<div id="side_bar" class="nav">
+			    <dl>
+			        <dt id="accountManage" class="big">帐号管理</dt>
+			    </dl>
+			    <dl>
+			        <dt id="networkManage" class="big">网络配置</dt>
+			    </dl>
+			    <dl >
+			        <dt id="catchManage" class="big" >数据采集配置</dt>
+					<dd id="manageDaqActivate">启动管理</dd>
+					<dd id="manageDaqVariables">变量管理</dd>
+					
+			    </dl>
+				<dl>
+			        <dt id="iptablesManage" class="big">Iptables配置</dt>
+					<dd id="addIptablesRules">添加规则</dd>
+					<dd id="manageIptablesRules">管理规则</dd>
+			    </dl>
+			    <dl>
+			        <dt id="snortManage" class="big">Snort配置</dt>
+					<dd id="manageSnortActivate">启动管理</dd>
+					<dd id="manageSnortRuleCategories">管理分类</dd>
+					<dd id="addSnortRules">添加规则</dd>
+					<dd id="manageSnortRules">管理规则</dd>
+			    </dl>
+			    <dl>
+			        <dt id="help" class="big">帮助</dt>
+			    </dl>
+				<dl>
+			        <dt id="about" class="big">关于</dt>
+			    </dl>
+		
+			 </div>
+		</div>
+		
+		<div id="right">
+				<iframe id="frame_box" >
+				</iframe>
+		</div>
+	</div>
+</body>
+	
+</html>

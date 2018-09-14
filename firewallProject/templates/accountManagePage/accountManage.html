@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <script type="text/javascript" src="../static/js/loadframe.js"></script>
+    <link media="screen" type="text/css" href="../static/css/common.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/mypagetitle.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/myinput.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/mybutton.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/accountManage.css" rel="stylesheet">
+    <script type="text/javascript" src="../static/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../static/js/accountManage.js"></script>
+</head>
+<body>
+<div class="body">
+    <div class="container">
+        <div class="my_page_title">帐号管理</div>
+        <div class="input_box">
+            <div class="my_input_div">
+                <label for="oldUsername" class="my_input_label">旧用户名：</label>
+                <input id="oldUsername" type="text" class="my_input_text" autofocus maxlength="20">
+            </div>
+            <div class="my_input_div">
+                <label for="oldPassword" class="my_input_label">旧&nbsp;&nbsp;密&nbsp;&nbsp;码：</label>
+                <input id="oldPassword" type="password" class="my_input_text" maxlength="20">
+            </div>
+            <div class="my_input_div">
+                <label for="newUsername1" class="my_input_label">新用户名：</label>
+                <input id="newUsername1" type="text" class="my_input_text" maxlength="20">
+            </div>
+            <div class="my_input_div">
+                <label for="newUsername2" class="my_input_label">确认新用户名：</label>
+                <input id="newUsername2" type="text" class="my_input_text" maxlength="20">
+            </div>
+            <div class="my_input_div">
+                <label for="newPassword1" class="my_input_label">新密码：</label>
+                <input id="newPassword1" type="password" class="my_input_text" maxlength="20">
+            </div>
+            <div class="my_input_div">
+                <label for="newPassword2" class="my_input_label">确认新密码：</label>
+                <input id="newPassword2" type="password" class="my_input_text" maxlength="20">
+            </div>
+        </div>
+        <div>
+            <span id="hint" style="color:red"></span><br>
+        </div>
+        <div class="my_buttons">
+            <div id="save" class="my_button">保存账户信息</div>
+            <div id="clean" class="my_button">清空输入</div>
+        </div>
+        <br>
+        <div align="center">
+            <span style="color:red">*&nbsp;请牢记用户名和密码</span>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

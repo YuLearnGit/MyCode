@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1446667744 source:e:\code\拷贝控制示例\main.cpp
+	<iostream>
+
+1511336297 source:e:\code\拷贝控制示例\src\folder.cpp
+	"Folder.h"
+
+1511336626 e:\code\拷贝控制示例\include\folder.h
+	<set>
+	"Message.h"
+
+1511336815 e:\code\拷贝控制示例\include\message.h
+	<string>
+	<set>
+
+1511336784 source:e:\code\拷贝控制示例\src\message.cpp
+	"Message.h"
+	"Folder.h"
+

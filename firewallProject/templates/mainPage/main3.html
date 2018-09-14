@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link>
+    <meta charset="UTF-8">
+    <title>管理</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <!--<link media="screen" type="text/css" href="../static/css/main.css" rel="stylesheet" ></link>-->
+    <!--<link media="screen" type="text/css" href="../static/css/nav.css" rel="stylesheet"></link>-->
+    <!--<link media="screen" type="text/css" href="../css/cloud-admin.css" rel="stylesheet">-->
+    <!--<link media="screen" type="text/css" href="../css/themes/default.css" rel="stylesheet">-->
+    <script type="text/javascript" src="../static/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.rotate.js"></script>
+    <script type="text/javascript" src="../static/js/main.js"></script>
+    <link media="screen" type="text/css" href="../static/css/main.css" rel="stylesheet">
+    <style media="screen" type="text/css" rel="stylesheet">
+
+
+    </style>
+</head>
+<body>
+<header class="common_background">
+    <div class="header_div">
+        <div class="menu_div">
+            <div id="menu_btn" class="menu_btn common_background" title="切换菜单样式">
+                <div class="menu_btn_div common_background">
+                    <div class="menu_wire"></div>
+                    <div class="menu_wire"></div>
+                    <div class="menu_wire"></div>
+                </div>
+            </div>
+        </div>
+        <div class="logo_div">
+            <img id="logo_img" class="logo_img" src="../static/image/logo_img.png" alt="Logo">
+        </div>
+        <div class="title_div">
+            <span class="title_text common_color common_font">物联网防火墙功能配置系统</span>
+        </div>
+        <div id="logout" class="logout_div" title="退出登录">
+            <i class="logout_img"></i>
+        </div>
+    </div>
+</header>
+<div id="body">
+    <div id="layout">
+        <div id="left_layout" class="common_background">
+            <div id="sidebar" class="sidebar">
+                <div id="menu">
+                    <ul id="menu_ul">
+                        <li class="one_menu no_sub">
+                            <div class="one_menu_div one_menu_background">
+                                <div class="one_menu_img_div one_menu_click">
+                                    <i class="one_menu_img one_menu_img_accountManage"></i>
+                                </div>
+                                <div class="small_menu_div">
+                                    <div class="one_menu_text_div  one_menu_click">
+                                        <span id="accountManage" class="one_menu_text one_menu_color">帐号管理</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="one_menu no_sub">
+                            <div class="one_menu_div one_menu_background">
+                                <div class="one_menu_img_div one_menu_click">
+                                    <i class="one_menu_img one_menu_img_networkManage"></i>
+                                </div>
+                                <div class="small_menu_div one_menu_background">
+                                    <div class="one_menu_text_div one_menu_click">
+                                        <span id="networkManage" class="one_menu_text one_menu_color">网络配置</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="one_menu has_sub ">
+                            <div class="one_menu_div one_menu_background">
+                                <div class="one_menu_img_div one_menu_click">
+                                    <i class="one_menu_img one_menu_img_daqManage"></i>
+                                </div>
+                                <div class="small_menu_div">
+                                    <div class="one_menu_text_div one_menu_click">
+                                        <span id="daqManage" class="one_menu_text one_menu_color">数据采集配置</span>
+                                        <div class="little_triangle_div"></div>
+                                    </div>
+                                    <ul class="two_menu_ul">
+                                        <li class="two_menu">
+                                            <div class="two_menu_div two_menu_background">
+                                                <div class="two_menu_text_div two_menu_click">
+                                                    <span id="manageDaqActivate" class="two_menu_text two_menu_color">启动管理</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="two_menu">
+                                            <div class="two_menu_div two_menu_background">
+                                                <div class="two_menu_text_div two_menu_click">
+                                                    <span id="manageDaqVariables" class="two_menu_text two_menu_color">变量管理</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="two_menu">
+                                            <div class="two_menu_div two_menu_background">
+                                                <div class="two_menu_text_div two_menu_click">
+                                                    <span id="monitorDaqVariables" class="two_menu_text two_menu_color">实时监控</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="one_menu has_sub">
+                            <div class="one_menu_div one_menu_background">
+                                <div class="one_menu_img_div one_menu_click">
+                                    <i class="one_menu_img one_menu_img_iptablesManage"></i>
+                                </div>
+                                <div class="small_menu_div">
+                                    <div class="one_menu_text_div one_menu_click">
+                                        <span id="iptablesManage" class="one_menu_text one_menu_color">Iptables配置</span>
+                                        <div class="little_triangle_div"></div>
+                                    </div>
+                                    <ul class="two_menu_ul">
+                                        <li class="two_menu">
+                                            <div class="two_menu_div two_menu_background">
+                                                <div class="two_menu_text_div two_menu_click">
+                                                    <span id="addIptablesRules" class="two_menu_text two_menu_color">添加规则</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="two_menu">
+                                            <div class="two_menu_div two_menu_background">
+                                                <div class="two_menu_text_div two_menu_click">
+                                                    <span id="manageIptablesRules" class="two_menu_text two_menu_color">管理规则</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="one_menu has_sub">
+                            <div class="one_menu_div one_menu_background">
+                                <div class="one_menu_img_div one_menu_click">
+                                    <i class="one_menu_img one_menu_img_snortManage"></i>
+                                </div>
+                                <div class="small_menu_div one_menu_background">
+                                    <div class="one_menu_text_div one_menu_click">
+                                        <span id="snortManage" class="one_menu_text one_menu_color">Snort配置</span>
+                                        <div class="little_triangle_div"></div>
+                                    </div>
+                                    <ul class="two_menu_ul">
+                                        <li class="two_menu">
+                                            <div class="two_menu_div two_menu_background">
+                                                <div class="two_menu_text_div two_menu_click">
+                                                    <span id="manageSnortActivate" class="two_menu_text two_menu_color">启动管理</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="two_menu">
+                                            <div class="two_menu_div two_menu_background">
+                                                <div class="two_menu_text_div two_menu_click">
+                                                    <span id="manageSnortRuleCategories"
+                                                          class="two_menu_text two_menu_color">管理分类</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="two_menu">
+                                            <div class="two_menu_div two_menu_background">
+                                                <div class="two_menu_text_div two_menu_click">
+                                                    <span id="addSnortRules" class="two_menu_text two_menu_color">添加规则</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="two_menu">
+                                            <div class="two_menu_div two_menu_background">
+                                                <div class="two_menu_text_div two_menu_click">
+                                                    <span id="manageSnortRules" class="two_menu_text two_menu_color">管理规则</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="one_menu no_sub">
+                            <div class="one_menu_div one_menu_background">
+                                <div class="one_menu_img_div one_menu_click">
+                                    <i class="one_menu_img one_menu_img_help"></i>
+                                </div>
+                                <div class="small_menu_div one_menu_background">
+                                    <div class="one_menu_text_div one_menu_click">
+                                        <span id="help" class="one_menu_text one_menu_color">帮助</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="one_menu no_sub one_menu_background">
+                            <div class="one_menu_div">
+                                <div class="one_menu_img_div one_menu_click">
+                                    <i class="one_menu_img one_menu_img_about"></i>
+                                </div>
+                                <div class="small_menu_div one_menu_background">
+                                    <div class="one_menu_text_div one_menu_click">
+                                        <span id="about" class="one_menu_text one_menu_color">关于</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="one_menu no_sub one_menu_background">
+                            <div class="one_menu_div">
+                                <div class="one_menu_img_div one_menu_click">
+                                    <i class="one_menu_img one_menu_img_setting"></i>
+                                </div>
+                                <div class="small_menu_div one_menu_background">
+                                    <div class="one_menu_text_div one_menu_click">
+                                        <span id="setting" class="one_menu_text one_menu_color">设置</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="right_layout">
+            <div id="main_content">
+                <iframe id="frame_box" src="">
+
+               </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="test">
+
+    </div>
+</div>
+</body>
+
+</html>

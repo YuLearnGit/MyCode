@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1527905719 source:e:\code\test\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+
+1527906040 source:e:\code\字符串中最长重复字串\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+

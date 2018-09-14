@@ -1,0 +1,95 @@
+﻿  Creating Win32/Debug cryptest.exe for MAC computation
+  用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.7.179.6572
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  生成启动时间为 2018/6/4 21:02:22。
+  项目“E:\code\cryptopp700\cryptlib.vcxproj”在节点 1 上(Build 个目标)。
+  InitializeBuildStatus:
+    正在对“Win32\cryptlib\Debug\cryptlib.tlog\unsuccessfulbuild”执行 Touch 任务。
+  CustomBuild:
+    所有输出均为最新。
+  ClCompile:
+    D:\Program Files (x86)\visual studio\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\CL.exe /c /Zi /nologo /W4 /WX- /diagnostics:classic /Od /Oi /Oy- /D USE_PRECOMPILED_HEADERS /Gm- /EHsc /RTC1 /MDd /GS /arch:SSE2 /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"pch.h" /Fp"Win32\cryptlib\Debug\cryptlib.pch" /Fo"Win32\cryptlib\Debug\\" /Fd"Win32\cryptlib\Debug\cryptlib.pdb" /Gd /TP /wd4231 /wd4251 /wd4275 /wd4355 /wd4505 /analyze- /FC /errorReport:none pch.cpp
+    pch.cpp
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptlib.vcxproj]
+  已完成生成项目“E:\code\cryptopp700\cryptlib.vcxproj”(Build 个目标)的操作 - 失败。
+  
+  生成失败。
+  
+  “E:\code\cryptopp700\cryptlib.vcxproj”(Build 目标) (1) ->
+  (ClCompile 目标) -> 
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptlib.vcxproj]
+  
+      0 个警告
+      1 个错误
+  
+  已用时间 00:00:01.20
+  用于 .NET Framework 的 Microsoft (R) 生成引擎版本 15.7.179.6572
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  
+  生成启动时间为 2018/6/4 21:02:24。
+  项目“E:\code\cryptopp700\cryptest.vcxproj”在节点 1 上(Build 个目标)。
+  InitializeBuildStatus:
+    正在对“Win32\cryptest\Debug\cryptest.tlog\unsuccessfulbuild”执行 Touch 任务。
+  ClCompile:
+    D:\Program Files (x86)\visual studio\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\CL.exe /c /Zi /nologo /W4 /WX- /diagnostics:classic /Od /Oi /Oy- /Gm- /EHsc /RTC1 /MDd /GS /arch:SSE2 /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Win32\cryptest\Debug\\" /Fd"Win32\cryptest\Debug\vc141.pdb" /Gd /TP /wd4231 /wd4251 /wd4275 /wd4355 /wd4505 /analyze- /FC /errorReport:none adhoc.cpp bench1.cpp bench2.cpp datatest.cpp dlltest.cpp fipsalgt.cpp regtest1.cpp regtest2.cpp regtest3.cpp test.cpp validat0.cpp validat1.cpp validat2.cpp validat3.cpp validat4.cpp
+    adhoc.cpp
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+    bench1.cpp
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+    bench2.cpp
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+    datatest.cpp
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+    dlltest.cpp
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+    fipsalgt.cpp
+    regtest1.cpp
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+    regtest2.cpp
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+    regtest3.cpp
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+    test.cpp
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+    validat0.cpp
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+    validat1.cpp
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+    validat2.cpp
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+    validat3.cpp
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+    validat4.cpp
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+    正在生成代码...
+  已完成生成项目“E:\code\cryptopp700\cryptest.vcxproj”(Build 个目标)的操作 - 失败。
+  
+  生成失败。
+  
+  “E:\code\cryptopp700\cryptest.vcxproj”(Build 目标) (1) ->
+  (ClCompile 目标) -> 
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+d:\program files (x86)\visual studio\vc\tools\msvc\14.14.26428\include\cstddef(7): fatal error C1083: 无法打开包括文件: “stddef.h”: No such file or directory [E:\code\cryptopp700\cryptest.vcxproj]
+  
+      0 个警告
+      14 个错误
+  
+  已用时间 00:00:01.91
+D:\Program Files (x86)\visual studio\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(123,5): error MSB3073: 命令“
+D:\Program Files (x86)\visual studio\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(123,5): error MSB3073:         msbuild /t:Build /p:Configuration=Debug;Platform=Win32 cryptlib.vcxproj
+D:\Program Files (x86)\visual studio\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(123,5): error MSB3073:         msbuild /t:Build /p:Configuration=Debug;Platform=Win32 cryptest.vcxproj
+D:\Program Files (x86)\visual studio\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(123,5): error MSB3073:       
+D:\Program Files (x86)\visual studio\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(123,5): error MSB3073: :VCEnd”已退出，代码为 1。

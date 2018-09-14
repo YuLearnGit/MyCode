@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>1.配置网关</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <script type="text/javascript" src="../static/js/loadframe.js"></script>
+    <link media="screen" type="text/css" href="../static/css/common.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/mypagetitle.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/myinput.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/mybutton.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/myhint.css" rel="stylesheet">
+    <link media="screen" type="text/css" href="../static/css/gateway.css" rel="stylesheet">
+    <script type="text/javascript" src="../static/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../static/js/gateway.js"></script>
+    <script type="text/javascript" src="../static/js/util.js"></script>
+</head>
+<body>
+<div class="body">
+    <div class="container">
+        <div class="my_page_title">1.网关设置</div>
+        <div class="input_box">
+            <div class="my_input_div">
+                <label for="ip" class="my_input_label">IP地址：</label>
+                <input id="ip" class="my_input_text" type="text" value="192.168.1.1" maxlength="15">
+            </div>
+            <div class="my_input_div">
+                <label for="mask" class="my_input_label">子网掩码：</label>
+                <input id="mask" class="my_input_text" type="text" value="255.255.255.0" maxlength="15">
+            </div>
+        </div>
+        <div class="my_hint_div">
+            <span id="hint" class="my_hint"></span>
+        </div>
+        <div class="my_buttons">
+            <div id="reload" class="my_button">刷新</div>
+            <div id="cancel" class="my_button">撤销</div>
+            <div id="post" class="my_button">提交</div>
+            <div id="next" class="my_button">下一步</div>
+        </div>
+        <div class="my_help_msg_div">
+            <div class="my_help_msg">* 配置原则：同一网段中</div>
+            <div class="my_help_msg">* 注意：提交后将导致网络重启，可能需要您手动配置当前电脑IP后，使用当前设置的新网关地址访问本系统</div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>数据采集变量管理</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<script type="text/javascript" src="../static/js/loadframe.js" ></script>
+	<link media="screen" type="text/css" href="../static/css/manageDaqVariables.css" rel="stylesheet" ></link>
+	<script type="text/javascript" src="../static/js/jquery-1.8.2.min.js" ></script>
+	<script type="text/javascript" src="../static/js/jquery.dataTables.js" ></script>
+	<link media="screen" type="text/css" href="../static/css/jquery.dataTables.css" rel="stylesheet" ></link>
+	<link media="screen" type="text/css" href="../static/css/manageDaqVariablesDataTables.css" rel="stylesheet" ></link>
+	<script type="text/javascript" src="../static/js/manageDaqVariables.js" ></script>
+</head>
+<body>
+	<div align="center" style="text-align:center">
+		<div class="div_body">
+			数据采集变量管理
+			<div>
+				<!-- 分割线 -->
+				<div style="background-color: #f63e74;width: 100%;height: 2px;margin:3px;"></div>
+
+				<table id="daq_variables" class="display">
+				</table>
+			</div>
+			<div>	
+				<div>
+					<br><span id="hint" style="color:red;word-wrap:break-word;"></span><br>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="fade_div hide"></div>
+	<div class="pop_div hide">
+		<div style="text-align:center;color:red;width:98%;margin:5px;">
+			<span id="addVariableHint">添加变量</span><div id="close_pop" class="close_div" title="关闭"><div style="width:20px;height:20px;"></div></div>
+		</div>
+		<table id="add_table" class="outside">
+			<caption style="text-align:left;">变量描述</caption>
+			<tr>
+				<td class="right" ><label>变量名称：</label></td>
+				<td class="left" ><input id="dataName" type="text"></td>
+				<td class="right"><label>设备名称：</label></td>
+				<td class="left"><input id="deviceName" type="text"></td>
+			</tr>
+			<tr>
+				<td class="right"><label>数据单位：</label></td>
+				<td class="left"><input id="dataUnit" type="text"></td>
+				<td colspan="2"><span id="id" hidden="true"></span></td>
+			</tr>
+		</table>
+		<table class="outside">
+			<caption style="text-align:left">连接参数</caption>
+			<tr>
+				<td class="right"><label>设备IP：</label></td>
+				<td class="left"><input id="deviceAddress" type="text"></td>
+				<td class="right"><label>设备端口：</label></td>
+				<td class="left"><input id="devicePort" type="text"></td>
+			</tr>
+			<tr>
+				<td class="right"><label>设备单元号：</label></td>
+				<td class="left"><input id="deviceUnit" type="text"></td>
+				<td colspan="2"></td>
+		</table>
+		<table class="outside">
+			<caption style="text-align:left">操作动作</caption>
+			<tr>
+				<td class="right"><label>数据地址：</label></td>
+				<td class="left"><input id="dataAddress" type="text"></td>
+				<td class="right"><label>执行操作：</label></td>
+				<td class="left"><select id="dataType">
+					<option value="COIL"			>01：读线圈</option>
+					<option value="DISCRETE_INPUT"	>02：读离散输入量</option>
+					<option value="HOLDING_REGISTER">03：读保持寄存器</option>
+					<option value="INPUT_REGISTER"	>04：读输入寄存器</option>
+					</select></td>
+			</tr>
+			<tr>
+				<td class="right"><label>数据长度(<span id="dataLengthHint" style="color:red;">位</span>长)：</label></td>
+				<td class="left"><input id="dataLength" type="text"></td>
+				<td colspan="2"></td>
+			</tr>
+		</table>
+		<div align="right" style="width:90%"> 
+			<button id="confirm_add">添加</button> <button id="cancel_add">关闭</button> <button id="clean_add">清空</button>
+		</div>
+		<div align="center"><span id="addHint" style="color:red;word-wrap:break-word;"></span></div>
+	</div>
+</body>
+	
+</html>

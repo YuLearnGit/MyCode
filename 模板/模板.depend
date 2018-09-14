@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1513929362 source:e:\code\Ä£°å\main.cpp
+	<iostream>
+	<vector>
+	<memory>
+	"Blob.h"
+
+1513928441 source:e:\code\Ä£°å\src\blob.cpp
+	"Blob.h"
+
+1535097896 e:\code\Ä£°å\include\blob.h
+	<vector>
+	<memory>
+

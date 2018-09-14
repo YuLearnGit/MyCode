@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1529913835 source:e:\code\正则表达式\main.cpp
+	<iostream>
+	<regex>
+	<vector>
+	<string>
+

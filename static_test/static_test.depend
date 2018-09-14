@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1536217832 source:e:\code\static_test\main.cpp
+	<iostream>
+	<cstring>
+	<set>
+	<map>
+
+1535292582 source:e:\code\static_test\src\bbb.cpp
+	"BBB.h"
+
+1535292693 e:\code\static_test\include\bbb.h
+
