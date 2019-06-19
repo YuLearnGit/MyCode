@@ -15,7 +15,6 @@ private:
 	Singleton& operator=(const Singleton&);
 	static Singleton* instance;
 
-
 };
 
 #endif // SINGLETON_H

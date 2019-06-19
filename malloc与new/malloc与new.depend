@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1538029731 source:e:\code\malloc”Înew\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<string>
+	<malloc.h>
+

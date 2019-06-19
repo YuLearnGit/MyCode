@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/js/index.js" ></script>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <title>index</title>
+</head>
+
+<body style="background-color:lightgoldenrodyellow">
+    <div id="header">
+        <h1>MyHtml</h1>
+    </div>
+    <div id="nav">
+        图片<br />
+        表格<br />
+        跳转测试<br />
+        <a href="#photo">链接</a><br />
+        表单元素<br />
+    </div>
+    <div id="section">
+        <h1>图片</h1>
+        <p>插入图片<img id="myimage" onclick="changeImage()" src="/img/jie.png" width="180" height="150"></p>
+        <hr />
+        <h1>表格</h1>
+        <table border="1">
+            <th>表头1</th>
+            <th>表头2</th>
+            <tr>
+                <td>Row 1, cell 1</td>
+                <td>Row 1, cell 2</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <hr />
+        <h1>跳转测试</h1>
+        <a href="index2.html#jump" target="_blank">跳转到index.html2</a>
+        <hr />
+        <a name="photo">
+            <h1>链接</h1>
+        </a>
+        <a href="https://www.baidu.com" target="_blank">打开百度搜索</a>
+        <br />
+        <script type="text/javascript">
+            document.write("Hello MMP!")
+        </script>
+        <hr />
+        <form>
+            student_name:<br>
+            <input type="text" name="student_name">
+            <br>
+            password:<br>
+            <input type="text" name="password">
+        </form>
+    </div>
+</body>

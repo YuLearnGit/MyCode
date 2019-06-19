@@ -1,7 +1,10 @@
 # depslib dependency file v1.0
-1536217832 source:e:\code\static_test\main.cpp
+1537147088 source:e:\code\static_test\main.cpp
 	<iostream>
 	<cstring>
+	<vector>
+	<map>
+	<set>
 	<set>
 	<map>
 

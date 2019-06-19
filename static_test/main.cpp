@@ -34,22 +34,45 @@ void FindNumsAppearOnce(vector<int> data,int* num1,int *num2)
         }
     }
 }
-class Test{
+class Test
+{
 public:
-    virtual void hello() final {cout<<"test hello"<<endl;}
-    Test(){cout<<"constructor"<<endl;}
-    ~Test(){cout<<"destructor"<<endl;};
+    virtual void hello()
+    {
+        cout<<"base hello"<<endl;
+    };
+    Test()
+    {
+        cout<<"constructor"<<endl;
+    }
+    ~Test()
+    {
+        cout<<"destructor"<<endl;
+    };
 };
 class derived: public Test
 {
-    void hello() {cout<<"derived hello"<<endl;}
+    void hello()
+    {
+        cout<<"derived hello"<<endl;
+    }
 };
-int main()
-{
 
-    derived *a = new derived;
-    a->hello();
-}
+//int main()
+//{
+//    char a[5] = {1,2,3,4,5};
+//    cout<<"sizeof(a) = "<<sizeof(a)<<endl;
+//    cout<<"strlen(a) = "<<strlen(a)<<endl;
+//    char b[] = {1,2,3,4,5};
+//    cout<<"sizeof(b) = "<<sizeof(b)<<endl;
+//    cout<<"strlen(b) = "<<strlen(b)<<endl;
+//    char *c = "12345";
+//    cout<<"sizeof(c) = "<<sizeof(c)<<endl;
+//    cout<<"strlen(c) = "<<strlen(c)<<endl;
+//    char d[] = "12345";
+//    cout<<"sizeof(d) = "<<sizeof(d)<<endl;
+//    cout<<"strlen(d) = "<<strlen(d)<<endl;
+//}
 struct RandomListNode
 {
     int label;
@@ -127,8 +150,8 @@ bool compare(const int lhs,const int rhs)
     return lhs>rhs;
 }
 
-//int main()
-//{
+int main()
+{
 //    //使用关键字类型的比较函数
 //    set<int,decltype(compare)*> my_set(compare);
 //    my_set = {2,5,3,1,8,15,23,4};
@@ -136,18 +159,18 @@ bool compare(const int lhs,const int rhs)
 //        cout<<it<<" ";
 //
 //    map<int,int,decltype(compare)*> my_map(compare);
-////    RandomListNode* a = new RandomListNode(0);
-////    RandomListNode* b = new RandomListNode(1);
-////    RandomListNode* c = new RandomListNode(2);
-////    RandomListNode* d = new RandomListNode(3);
-////    RandomListNode* e = new RandomListNode(4);
-////    a->next = b;
-////    a->random = c;
-////    b->next = c;
-////    b->random = e;
-////    c->next = d;
-////    d->next = e;
-////    d->random = b;
-////    RandomListNode* res = Clone(a);
-//
-//}
+    RandomListNode* a = new RandomListNode(0);
+    RandomListNode* b = new RandomListNode(1);
+    RandomListNode* c = new RandomListNode(2);
+    RandomListNode* d = new RandomListNode(3);
+    RandomListNode* e = new RandomListNode(4);
+    a->next = b;
+    a->random = c;
+    b->next = c;
+    b->random = e;
+    c->next = d;
+    d->next = e;
+    d->random = b;
+    RandomListNode* res = Clone(a);
+
+}

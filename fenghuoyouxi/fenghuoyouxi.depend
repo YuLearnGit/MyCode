@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1537192515 source:e:\code\fenghuoyouxi\main.cpp
+	<iostream>
+	<string>
+	<vector>
+
