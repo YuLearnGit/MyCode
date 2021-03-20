@@ -3,7 +3,7 @@ click==6.7
 configparser==3.5.0
 Flask==0.12
 itsdangerous==0.24
-Jinja2==2.9.5
+Jinja2==2.11.3
 MarkupSafe==1.0
 modbus-tk==0.5.4
 mysql-connector==2.1.4
